@@ -1,0 +1,13 @@
+{
+  "name": "Besiege Bot",
+  "version": "1.0.0",
+  "description": "A bot for the Besiege Bot Discord",
+  "main": "bot.js",
+  "author": "Thomas Sauerwald",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.2.1",
+    "fs": "0.0.1-security",
+    "npm": "^5.3.0"
+  }
+}

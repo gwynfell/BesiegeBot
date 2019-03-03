@@ -1,0 +1,914 @@
+{
+  "blocks": [
+    {
+      "name" : "Starting Block",
+      "ID" : 0,
+      "aliases": ["core block"],
+      "weight": 0.25,
+      "destructible" : false,
+      "shearStrength" : "unknown",
+      "flexuralStrength" : {
+        "x" : "unknown",
+        "y" : "unknown",
+        "z" : "unknown"
+      },
+      "friction" : "unknown"
+    },
+    {
+      "name" : "Double Wooden Block",
+      "ID" : 1,
+      "aliases": ["double wood"],
+      "weight": 0.50,
+      "destructible" : true,
+      "shearStrength" : "unknown",
+      "flexuralStrength" : {
+        "x" : "unknown",
+        "y" : "unknown",
+        "z" : "unknown"
+      },
+      "friction" : "unknown"
+    },
+    {
+      "name" : "Powered Wheel",
+      "ID" : 2,
+      "aliases": ["motor wheel", "wheel"],
+      "weight": 1.00,
+      "destructible" : true,
+      "shearStrength" : "unknown",
+      "flexuralStrength" : {
+        "x" : "unknown",
+        "y" : "unknown",
+        "z" : "unknown"
+      },
+      "friction" : "unknown"
+    },
+    {
+      "name" : "Metal Blade",
+      "ID" : 3,
+      "aliases": ["blade"],
+      "weight": 0.30,
+      "destructible" : false,
+      "shearStrength" : "unknown",
+      "flexuralStrength" : {
+        "x" : "unknown",
+        "y" : "unknown",
+        "z" : "unknown"
+      },
+      "friction" : "unknown"
+    },
+    {
+      "name" : "Decoupler",
+      "ID" : 4,
+      "aliases": ["explosive decoupler"],
+      "weight": 0.50,
+      "destructible" : false,
+      "shearStrength" : "unknown",
+      "flexuralStrength" : {
+        "x" : "unknown",
+        "y" : "unknown",
+        "z" : "unknown"
+      },
+      "friction" : "unknown"
+    },
+    {
+      "name" : "Hinge",
+      "ID" : 5,
+      "aliases": [],
+      "weight": 0.50,
+      "destructible" : false,
+      "shearStrength" : "unknown",
+      "flexuralStrength" : {
+        "x" : "unknown",
+        "y" : "unknown",
+        "z" : "unknown"
+      },
+      "friction" : "unknown"
+    },
+    {
+      "name" : "Metal Ball",
+      "ID" : 6,
+      "aliases": ["spike ball"],
+      "weight": 1.00,
+      "destructible" : false,
+      "shearStrength" : "unknown",
+      "flexuralStrength" : {
+        "x" : "unknown",
+        "y" : "unknown",
+        "z" : "unknown"
+      },
+      "friction" : "unknown"
+    },
+    {
+      "name" : "Brace",
+      "ID" : 7,
+      "aliases": [],
+      "weight": 0.50,
+      "destructible" : false,
+      "shearStrength" : "unknown",
+      "flexuralStrength" : {
+        "x" : "unknown",
+        "y" : "unknown",
+        "z" : "unknown"
+      },
+      "friction" : "unknown"
+    },
+    {
+        "name" : "Unused Block",
+        "ID" : 8,
+        "aliases": [],
+        "weight": 0.00,
+        "destructible" : false,
+        "shearStrength" : "unknown",
+        "flexuralStrength" : {
+          "x" : "unknown",
+          "y" : "unknown",
+          "z" : "unknown"
+        },
+        "friction" : "unknown"
+      },
+    {
+      "name" : "Spring",
+      "ID" : 9,
+      "aliases": ["contractable spring"],
+      "weight": 0.30,
+      "destructible" : false,
+      "shearStrength" : "unknown",
+      "flexuralStrength" : {
+        "x" : "unknown",
+        "y" : "unknown",
+        "z" : "unknown"
+      },
+      "friction" : "unknown"
+    },
+    {
+      "name" : "Wood Panel",
+      "ID" : 10,
+      "aliases": ["wood armor", "aooden armor plate"],
+      "weight": 0.35,
+      "destructible" : false,
+      "shearStrength" : "unknown",
+      "flexuralStrength" : {
+        "x" : "unknown",
+        "y" : "unknown",
+        "z" : "unknown"
+      },
+      "friction" : "unknown"
+    },
+    {
+      "name" : "Cannon",
+      "ID" : 11,
+      "aliases": [],
+      "weight": 1.50,
+      "destructible" : false,
+      "shearStrength" : "unknown",
+      "flexuralStrength" : {
+        "x" : "unknown",
+        "y" : "unknown",
+        "z" : "unknown"
+      },
+      "friction" : "unknown"
+    },
+    {
+      "name" : "Scaling Block",
+      "ID" : 12,
+      "aliases": [],
+      "weight": 0.50,
+      "destructible" : false,
+      "shearStrength" : "unknown",
+      "flexuralStrength" : {
+        "x" : "unknown",
+        "y" : "unknown",
+        "z" : "unknown"
+      },
+      "friction" : "unknown"
+    },
+    {
+      "name" : "Steering Block",
+      "ID" : 13,
+      "aliases": [],
+      "weight": 1.00,
+      "destructible" : false,
+      "shearStrength" : "unknown",
+      "flexuralStrength" : {
+        "x" : "unknown",
+        "y" : "unknown",
+        "z" : "unknown"
+      },
+      "friction" : "unknown"
+    },
+    {
+      "name" : "Flying Block",
+      "ID" : 14,
+      "aliases": [],
+      "weight": 0.50,
+      "destructible" : false,
+      "shearStrength" : "unknown",
+      "flexuralStrength" : {
+        "x" : "unknown",
+        "y" : "unknown",
+        "z" : "unknown"
+      },
+      "friction" : "unknown"
+    },
+    {
+      "name" : "Single Wooden Block",
+      "ID" : 15,
+      "aliases": ["wooden block", "wood"],
+      "weight": 0.30,
+      "destructible" : true,
+      "shearStrength" : "unknown",
+      "flexuralStrength" : {
+        "x" : "unknown",
+        "y" : "unknown",
+        "z" : "unknown"
+      },
+      "friction" : "unknown"
+    },
+    {
+      "name" : "Suspension",
+      "ID" : 16,
+      "aliases": [],
+      "weight": 0.50,
+      "destructible" : false,
+      "shearStrength" : "unknown",
+      "flexuralStrength" : {
+        "x" : "unknown",
+        "y" : "unknown",
+        "z" : "unknown"
+      },
+      "friction" : "unknown"
+    },
+    {
+      "name" : "Circular Saw",
+      "ID" : 17,
+      "aliases": ["saw"],
+      "weight": 1.00,
+      "destructible" : false,
+      "shearStrength" : "unknown",
+      "flexuralStrength" : {
+        "x" : "unknown",
+        "y" : "unknown",
+        "z" : "unknown"
+      },
+      "friction" : "unknown"
+    },
+    {
+      "name" : "Piston",
+      "ID" : 18,
+      "aliases": [],
+      "weight": 0.50,
+      "destructible" : false,
+      "shearStrength" : "unknown",
+      "flexuralStrength" : {
+        "x" : "unknown",
+        "y" : "unknown",
+        "z" : "unknown"
+      },
+      "friction" : "unknown"
+    },
+    {
+      "name" : "Swivel",
+      "ID" : 19,
+      "aliases": ["swivel joint"],
+      "weight": 0.50,
+      "destructible" : false,
+      "shearStrength" : "unknown",
+      "flexuralStrength" : {
+        "x" : "unknown",
+        "y" : "unknown",
+        "z" : "unknown"
+      },
+      "friction" : "unknown"
+    },
+    {
+      "name" : "Spike",
+      "ID" : 20,
+      "aliases": [],
+      "weight": 0.30,
+      "destructible" : false,
+      "shearStrength" : "unknown",
+      "flexuralStrength" : {
+        "x" : "unknown",
+        "y" : "unknown",
+        "z" : "unknown"
+      },
+      "friction" : "unknown"
+    },
+    {
+      "name" : "Flamethrower",
+      "ID" : 21,
+      "aliases": [],
+      "weight": 0.30,
+      "destructible" : false,
+      "shearStrength" : "unknown",
+      "flexuralStrength" : {
+        "x" : "unknown",
+        "y" : "unknown",
+        "z" : "unknown"
+      },
+      "friction" : "unknown"
+    },
+    {
+      "name" : "Spinning Block",
+      "ID" : 22,
+      "aliases": [],
+      "weight": 1.00,
+      "destructible" : false,
+      "shearStrength" : "unknown",
+      "flexuralStrength" : {
+        "x" : "unknown",
+        "y" : "unknown",
+        "z" : "unknown"
+      },
+      "friction" : "unknown"
+    },
+    {
+      "name" : "Bomb",
+      "ID" : 23,
+      "aliases": [],
+      "weight": 0.5,
+      "destructible" : true,
+      "shearStrength" : "unknown",
+      "flexuralStrength" : {
+        "x" : "unknown",
+        "y" : "unknown",
+        "z" : "unknown"
+      },
+      "friction" : "unknown"
+    },
+    {
+      "name" : "Armor Plate Small",
+      "ID" : 24,
+      "aliases": ["small armor plate", "armor plate", "small armor"],
+      "weight": 0.25,
+      "destructible" : false,
+      "shearStrength" : "unknown",
+      "flexuralStrength" : {
+        "x" : "unknown",
+        "y" : "unknown",
+        "z" : "unknown"
+      },
+      "friction" : "unknown"
+    },
+    {
+      "name" : "Wing",
+      "ID" : 25,
+      "aliases": [],
+      "weight": 0.30,
+      "destructible" : true,
+      "shearStrength" : "unknown",
+      "flexuralStrength" : {
+        "x" : "unknown",
+        "y" : "unknown",
+        "z" : "unknown"
+      },
+      "friction" : "unknown"
+    },
+    {
+      "name" : "Propeller",
+      "ID" : 26,
+      "aliases": ["large propeller", "big propeller", "long propeller"],
+      "weight": 0.30,
+      "destructible" : true,
+      "shearStrength" : "unknown",
+      "flexuralStrength" : {
+        "x" : "unknown",
+        "y" : "unknown",
+        "z" : "unknown"
+      },
+      "friction" : "unknown"
+    },
+    {
+      "name" : "Grabber",
+      "ID" : 27,
+      "aliases": [],
+      "weight": 0.50,
+      "destructible" : false,
+      "shearStrength" : "unknown",
+      "flexuralStrength" : {
+        "x" : "unknown",
+        "y" : "unknown",
+        "z" : "unknown"
+      },
+      "friction" : "unknown"
+    },
+    {
+      "name" : "Steering Hinge",
+      "ID" : 28,
+      "aliases": [],
+      "weight": 1.00,
+      "destructible" : false,
+      "shearStrength" : "unknown",
+      "flexuralStrength" : {
+        "x" : "unknown",
+        "y" : "unknown",
+        "z" : "unknown"
+      },
+      "friction" : "unknown"
+    },
+    {
+      "name" : "Armor Plate Round",
+      "ID" : 29,
+      "aliases": ["round armor plate", "round armor"],
+      "weight": 0.50,
+      "destructible" : false,
+      "shearStrength" : "unknown",
+      "flexuralStrength" : {
+        "x" : "unknown",
+        "y" : "unknown",
+        "z" : "unknown"
+      },
+      "friction" : "unknown"
+    },
+    {
+      "name" : "Bomb Holder",
+      "ID" : 30,
+      "aliases": ["bomb cage", "holder"],
+      "weight": 0.50,
+      "destructible" : false,
+      "shearStrength" : "unknown",
+      "flexuralStrength" : {
+        "x" : "unknown",
+        "y" : "unknown",
+        "z" : "unknown"
+      },
+      "friction" : "unknown"
+    },
+    {
+      "name" : "Flaming Ball",
+      "ID" : 31,
+      "aliases": ["fire ball"],
+      "weight": 0.50,
+      "destructible" : true,
+      "shearStrength" : "unknown",
+      "flexuralStrength" : {
+        "x" : "unknown",
+        "y" : "unknown",
+        "z" : "unknown"
+      },
+      "friction" : "unknown"
+    },
+    {
+      "name" : "Armor Plate Large",
+      "ID" : 32,
+      "aliases": ["large armor plate", "large armor"],
+      "weight": 0.25,
+      "destructible" : false,
+      "shearStrength" : "unknown",
+      "flexuralStrength" : {
+        "x" : "unknown",
+        "y" : "unknown",
+        "z" : "unknown"
+      },
+      "friction" : "unknown"
+    },
+    {
+      "name" : "Plow",
+      "ID" : 33,
+      "aliases": [],
+      "weight": 1.00,
+      "destructible" : false,
+      "shearStrength" : "unknown",
+      "flexuralStrength" : {
+        "x" : "unknown",
+        "y" : "unknown",
+        "z" : "unknown"
+      },
+      "friction" : "unknown"
+    },
+    {
+      "name" : "Wing Panel",
+      "ID" : 34,
+      "aliases": [],
+      "weight": 0.50,
+      "destructible" : true,
+      "shearStrength" : "unknown",
+      "flexuralStrength" : {
+        "x" : "unknown",
+        "y" : "unknown",
+        "z" : "unknown"
+      },
+      "friction" : "unknown"
+    },
+    {
+      "name" : "Ballast",
+      "ID" : 35,
+      "aliases": ["weight"],
+      "weight": 0.50,
+      "destructible" : false,
+      "shearStrength" : "unknown",
+      "flexuralStrength" : {
+        "x" : "unknown",
+        "y" : "unknown",
+        "z" : "unknown"
+      },
+      "friction" : "unknown"
+    },
+    {
+      "name" : "Boulder",
+      "ID" : 36,
+      "aliases": ["rock"],
+      "weight": 5.00,
+      "destructible" : true,
+      "shearStrength" : "unknown",
+      "flexuralStrength" : {
+        "x" : "unknown",
+        "y" : "unknown",
+        "z" : "unknown"
+      },
+      "friction" : "unknown"
+    },
+    {
+      "name" : "Half Pipe",
+      "ID" : 37,
+      "aliases": [],
+      "weight": 1.00,
+      "destructible" : false,
+      "shearStrength" : "unknown",
+      "flexuralStrength" : {
+        "x" : "unknown",
+        "y" : "unknown",
+        "z" : "unknown"
+      },
+      "friction" : "unknown"
+    },
+    {
+      "name" : "Cog Medium Unpowered",
+      "ID" : 38,
+      "aliases": ["gear medium unpowered", "cog small unpowered", "gear small unpowered"],
+      "weight": 0.50,
+      "destructible" : false,
+      "shearStrength" : "unknown",
+      "flexuralStrength" : {
+        "x" : "unknown",
+        "y" : "unknown",
+        "z" : "unknown"
+      },
+      "friction" : "unknown"
+    },
+    {
+      "name" : "Cog Medium Powered",
+      "ID" : 39,
+      "aliases": ["gear medium powered", "cog small powered", "gear small powered" , "cog", "gear"],
+      "weight": 0.50,
+      "destructible" : false,
+      "shearStrength" : "unknown",
+      "flexuralStrength" : {
+        "x" : "unknown",
+        "y" : "unknown",
+        "z" : "unknown"
+      },
+      "friction" : "unknown"
+    },
+    {
+      "name" : "Wheel Unpowered",
+      "ID" : 40,
+      "aliases": [],
+      "weight": 1.00,
+      "destructible" : true,
+      "shearStrength" : "unknown",
+      "flexuralStrength" : {
+        "x" : "unknown",
+        "y" : "unknown",
+        "z" : "unknown"
+      },
+      "friction" : "unknown"
+    },
+    {
+      "name" : "Wooden Pole",
+      "ID" : 41,
+      "aliases": ["pole"],
+      "weight": 0.50,
+      "destructible" : true,
+      "shearStrength" : "unknown",
+      "flexuralStrength" : {
+        "x" : "unknown",
+        "y" : "unknown",
+        "z" : "unknown"
+      },
+      "friction" : "unknown"
+    },
+    {
+      "name" : "Slider",
+      "ID" : 42,
+      "aliases": [],
+      "weight": 0.50,
+      "destructible" : false,
+      "shearStrength" : "unknown",
+      "flexuralStrength" : {
+        "x" : "unknown",
+        "y" : "unknown",
+        "z" : "unknown"
+      },
+      "friction" : "unknown"
+    },
+    {
+      "name" : "Balloon",
+      "ID" : 43,
+      "aliases": [],
+      "weight": 0.22,
+      "destructible" : true,
+      "shearStrength" : "unknown",
+      "flexuralStrength" : {
+        "x" : "unknown",
+        "y" : "unknown",
+        "z" : "unknown"
+      },
+      "friction" : "unknown"
+    },
+    {
+      "name" : "Ball Joint",
+      "ID" : 44,
+      "aliases": [],
+      "weight": 0.50,
+      "destructible" : false,
+      "shearStrength" : "unknown",
+      "flexuralStrength" : {
+        "x" : "unknown",
+        "y" : "unknown",
+        "z" : "unknown"
+      },
+      "friction" : "unknown"
+    },
+    {
+      "name" : "Rope Winch",
+      "ID" : 45,
+      "aliases": ["rope", "winch"],
+      "weight": 1.0,
+      "destructible" : true,
+      "shearStrength" : "unknown",
+      "flexuralStrength" : {
+        "x" : "unknown",
+        "y" : "unknown",
+        "z" : "unknown"
+      },
+      "friction" : "unknown"
+    },
+    {
+      "name" : "Large Wheel",
+      "ID" : 46,
+      "aliases": ["big wheel"],
+      "weight": 1.00,
+      "destructible" : true,
+      "shearStrength" : "unknown",
+      "flexuralStrength" : {
+        "x" : "unknown",
+        "y" : "unknown",
+        "z" : "unknown"
+      },
+      "friction" : "unknown"
+    },
+    {
+      "name" : "Torch",
+      "ID" : 47,
+      "aliases": [],
+      "weight": 1.00,
+      "destructible" : false,
+      "shearStrength" : "unknown",
+      "flexuralStrength" : {
+        "x" : "unknown",
+        "y" : "unknown",
+        "z" : "unknown"
+      },
+      "friction" : "unknown"
+    },
+    {
+      "name" : "Drill",
+      "ID" : 48,
+      "aliases": [],
+      "weight": 1.00,
+      "destructible" : false,
+      "shearStrength" : "unknown",
+      "flexuralStrength" : {
+        "x" : "unknown",
+        "y" : "unknown",
+        "z" : "unknown"
+      },
+      "friction" : "unknown"
+    },
+    {
+      "name" : "Grip Pad",
+      "ID" : 49,
+      "aliases": ["friction pad"],
+      "weight": 0.50,
+      "destructible" : false,
+      "shearStrength" : "unknown",
+      "flexuralStrength" : {
+        "x" : "unknown",
+        "y" : "unknown",
+        "z" : "unknown"
+      },
+      "friction" : "unknown"
+    },
+    {
+      "name" : "Small Wheel",
+      "ID" : 50,
+      "aliases": ["caster wheel"],
+      "weight": 0.50,
+      "destructible" : true,
+      "shearStrength" : "unknown",
+      "flexuralStrength" : {
+        "x" : "unknown",
+        "y" : "unknown",
+        "z" : "unknown"
+      },
+      "friction" : "unknown"
+    },
+    {
+      "name" : "Cog Large Unpowered",
+      "ID" : 51,
+      "aliases": ["large gear", "gear large unpowered"],
+      "weight": 0.50,
+      "destructible" : false,
+      "shearStrength" : "unknown",
+      "flexuralStrength" : {
+        "x" : "unknown",
+        "y" : "unknown",
+        "z" : "unknown"
+      },
+      "friction" : "unknown"
+    },
+    {
+      "name" : "Alternative Small Propeller",
+      "ID" : 52,
+      "aliases": ["alternative small rotor"],
+      "weight": 0.30,
+      "destructible" : true,
+      "shearStrength" : "unknown",
+      "flexuralStrength" : {
+        "x" : "unknown",
+        "y" : "unknown",
+        "z" : "unknown"
+      },
+      "friction" : "unknown"
+    },
+    {
+      "name" : "Shrapnel Cannon",
+      "ID" : 53,
+      "aliases": [],
+      "weight": 1.50,
+      "destructible" : false,
+      "shearStrength" : "unknown",
+      "flexuralStrength" : {
+        "x" : "unknown",
+        "y" : "unknown",
+        "z" : "unknown"
+      },
+      "friction" : "unknown"
+    },
+    {
+      "name" : "Grenade",
+      "ID" : 54,
+      "aliases": ["remote grenade"],
+      "weight": 0.50,
+      "destructible" : true,
+      "shearStrength" : "unknown",
+      "flexuralStrength" : {
+        "x" : "unknown",
+        "y" : "unknown",
+        "z" : "unknown"
+      },
+      "friction" : "unknown"
+    },
+    {
+      "name" : "Small Propeller",
+      "ID" : 55,
+      "aliases": ["aerodynamic propeller", "small propeller rotor"],
+      "weight": 0.30,
+      "destructible" : true,
+      "shearStrength" : "unknown",
+      "flexuralStrength" : {
+        "x" : "unknown",
+        "y" : "unknown",
+        "z" : "unknown"
+      },
+      "friction" : "unknown"
+    },
+    {
+      "name" : "Water Cannon",
+      "ID" : 56,
+      "aliases": [],
+      "weight": 1.50,
+      "destructible" : false,
+      "shearStrength" : "unknown",
+      "flexuralStrength" : {
+        "x" : "unknown",
+        "y" : "unknown",
+        "z" : "unknown"
+      },
+      "friction" : "unknown"
+    },
+    {
+      "name" : "Pin",
+      "ID" : 57,
+      "aliases": [],
+      "weight": 0.00,
+      "destructible" : false,
+      "shearStrength" : "-",
+      "flexuralStrength" : {
+        "x" : "-",
+        "y" : "-",
+        "z" : "-"
+      },
+      "friction" : "-"
+    },
+    {
+      "name" : "Camera",
+      "ID" : 58,
+      "aliases": [],
+      "weight": 0.00,
+      "destructible" : false,
+      "shearStrength" : "-",
+      "flexuralStrength" : {
+        "x" : "-",
+        "y" : "-",
+        "z" : "-"
+      },
+      "friction" : "-"
+    },
+    {
+      "name" : "Rocket",
+      "ID" : 59,
+      "aliases": [],
+      "weight": 0.20,
+      "destructible" : false,
+      "shearStrength" : "unknown",
+      "flexuralStrength" : {
+        "x" : "unknown",
+        "y" : "unknown",
+        "z" : "unknown"
+      },
+      "friction" : "unknown"
+    },
+    {
+      "name" : "Large Powered Wheel",
+      "ID" : 60,
+      "aliases": [],
+      "weight": 1.00,
+      "destructible" : true,
+      "shearStrength" : "unknown",
+      "flexuralStrength" : {
+        "x" : "unknown",
+        "y" : "unknown",
+        "z" : "unknown"
+      },
+      "friction" : "unknown"
+    },
+    {
+      "name" : "Crossbow",
+      "ID" : 61,
+      "aliases": [],
+      "weight": 0.50,
+      "destructible" : false,
+      "shear Strength" : "unknown",
+      "flexural Strength" : {
+        "x" : "unknown",
+        "y" : "unknown",
+        "z" : "unknown"
+      },
+      "friction" : "unknown"
+    },
+    {
+      "name" : "Vacuum",
+      "ID" : 62,
+      "aliases": [],
+      "weight": 0.50,
+      "destructible" : false,
+      "shearStrength" : "unknown",
+      "flexuralStrength" : {
+        "x" : "unknown",
+        "y" : "unknown",
+        "z" : "unknown"
+      },
+      "friction" : "unknown"
+    },
+    {
+      "name" : "Log",
+      "ID" : 63,
+      "aliases": ["wooden log"],
+      "weight": 1.00,
+      "destructible" : true,
+      "shearStrength" : "unknown",
+      "flexuralStrength" : {
+        "x" : "unknown",
+        "y" : "unknown",
+        "z" : "unknown"
+      },
+      "friction" : "unknown"
+    },
+    {
+      "name" : "Burned Single Wooden Block",
+      "ID" : 64,
+      "aliases": [],
+      "weight": 0.00,
+      "destructible" : false,
+      "shearStrength" : "-",
+      "flexuralStrength" : {
+        "x" : "-",
+        "y" : "-",
+        "z" : "-"
+      },
+      "friction" : "-"
+    }
+  ]
+}

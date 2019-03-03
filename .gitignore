@@ -67,3 +67,6 @@ typings/
 id_rsa
 .DS_Store
 .git
+
+#IGNORE TOKEN!
+config.json

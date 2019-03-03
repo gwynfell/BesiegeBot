@@ -1,0 +1,76 @@
+{
+  "bots": [
+    {
+      "name" : "Mental Hammer",
+      "url" : "Mental_Hammer",
+      "rank" : 1,
+      "alias": "Our supreme leader"
+    },
+    {
+      "name" : "Mega Miner",
+      "url" : "Mega_Miner",
+      "rank" : 1,
+      "alias": "The biggest and yeetiest"
+    },
+    {
+      "name" : "Thic AF Mental Hammer",
+      "url" : "Thic_AF_Mental_Hammer",
+      "rank" : 2,
+      "alias": "The actual Big Boss"
+    },
+    {
+      "name" : "Velo",
+      "url" : "Velo",
+      "rank" : 2,
+      "alias": "The murderous underdog"
+    },
+    {
+      "name" : "Stop Resisting",
+      "url" : "Stop_Resisting",
+      "rank" : 2,
+      "alias": "Stop fucking resisting"
+    },
+    {
+      "name" : "T-Bone",
+      "url" : "T_Bone",
+      "rank" : 2,
+      "alias": "The meatiest yeet"
+    },
+    {
+      "name" : "Antal Hammer",
+      "url" : "Antal_Hammer",
+      "rank" : 3,
+      "alias": "The Megaweight slayer"
+    },
+    {
+      "name" : "Mace Face",
+      "url" : "Mace_Face",
+      "rank" : 3,
+      "alias": "I will mace yer face!"
+    },
+    {
+      "name" : "The Court",
+      "url" : "The_Court",
+      "rank" : 3,
+      "alias": "Get judged boi!"
+    },
+    {
+      "name" : "MC Hammer",
+      "url" : "MC_Hammer",
+      "rank" : 3,
+      "alias": "Superheavyweight takedown"
+    },
+    {
+      "name" : "Hammer Table",
+      "url" : "Hammer_Table",
+      "rank" : 4,
+      "alias": "The tables have turned"
+    },
+    {
+      "name" : "Fental Hammer",
+      "url" : "Fental_Hammer",
+      "rank" : 4,
+      "alias": "The hyperactive force"
+    }
+  ]
+}
