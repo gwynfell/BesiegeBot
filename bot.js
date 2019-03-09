@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const bot = new Discord.Client();
 const fs = require ("fs");
 const config = require("./config.json");
-const reactionInterface = require("./functions/reactionInterface.js")
+const reactionInterface = require("./functions/reactionInterface.js");
 
 // extending the bot client for easy access in the commands.
 bot.config = config;
@@ -11,15 +11,15 @@ bot.aliases = new Discord.Collection();
 bot.interface = reactionInterface;
 
 // Load the contents of the `/commands/` folder and each file in it.
-fs.readdir("./commands/",(err, files) => {
+fs.readdir("./commands/", (err, files) => {
   if (err) console.error(err);
   console.log(`Loading a total of ${files.length} commands.`);
   // Loops through each file in that folder
   files.forEach(f=> {
     // Check if the file has the ".js" extension.
     if(f.split(".").slice(-1)[0] !== "js") return;
-    //require the file itself in memory
-    let props = require(`./commands/${f}`);
+    // require the file itself in memory
+    const props = require(`./commands/${f}`);
     console.log(`>Loading Command: ${props.help.name}. -success`);
     // add the command to the Commands Collection
     bot.commands.set(props.help.name, props);
@@ -41,14 +41,15 @@ bot.on("message", async msg => {
   const args = msg.content.slice(config.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
 
-  let perms = bot.elevation(msg);
+  const perms = bot.elevation(msg);
   let cmd;
   // check if the command exists in commands
   if (bot.commands.has(command)) {
     // Assign the command, if it exists in commands
     cmd = bot.commands.get(command);
   // Check if the comman exists in Aliases
-  } else if (bot.aliases.has(command)) {
+  }
+  else if (bot.aliases.has(command)) {
     // Assign the command, if it exists in Aliasses
     cmd = bot.commands.get(bot.aliases.get(command));
   }
@@ -62,13 +63,13 @@ bot.on("message", async msg => {
 });
 
 // Ready event, write message to the console.
-bot.on("ready",() => {
+bot.once("ready", () => {
   console.log(`Besiege Bot: Ready to serve ${bot.guilds.size} servers.`);
-  bot.user.setPresence({ game: {name: `Besiege`, type: 0 } });
+  bot.user.setPresence({ game: { name: `Besiege`, type: 0 } });
 });
 
 // Welcome message (guildMemberAdd event)
-bot.on('guildMemberAdd', member => {
+bot.on("guildMemberAdd", member => {
   member.guild.channels.get(config.chanID.welcome).send(`Welcome, ${member}!\nMake sure to check ${member.guild.channels.get(config.chanID.arenaInfo)} for the times at which the server is usually up.\nIn ${member.guild.channels.get(config.chanID.gallery)} you can find some inspiration.`);
 });
 
@@ -80,22 +81,23 @@ bot.on("warn", console.warn);
 bot.login(config.token);
 
 // function to reload a commands cache.
-bot.reload = function (command) {
+bot.reload = function(command) {
   return new Promise((resolve, reject) => {
     try {
       delete require.cache[require.resolve(`./commands/${command}.js`)];
-      let cmd = require(`./commands/${command}`);
+      const cmd = require(`./commands/${command}`);
       bot.commands.delete(command);
       bot.commands.set(command, cmd);
       resolve();
-    } catch (e) {
+    }
+    catch (e) {
       reject(e);
     }
   });
 };
 
 // Calculates the permission level.
-bot.elevation = function (msg) {
+bot.elevation = function(msg) {
   /* this function should resolve to an permission level which
      is then sent to the command handler for verification */
   let permlvl = 0;

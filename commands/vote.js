@@ -1,6 +1,3 @@
-﻿
-const Discord = require("discord.js");
-
 module.exports.run = async (client, message, args) => {
   const emojis = ["1⃣", "2⃣", "3⃣", "4⃣", "5⃣", "6⃣", "7⃣", "8⃣", "9⃣", "🔟", "👍", "👎", "🤷"];
   function isInt(value) {
@@ -13,12 +10,12 @@ module.exports.run = async (client, message, args) => {
   }
   if (isInt(args[0])) {
     if (args[0] > 10 || args[0] < 2) return message.channel.send("The amount of options must be between 2 and 10.").then(msg => msg.delete(10000));
-    react(0, args[0]-1);
+    react(0, args[0] - 1);
   }
   else {
     react(10, 12);
   }
-}
+};
 
 exports.conf = {
   permLevel: 0,

@@ -4,13 +4,13 @@ const fs = require("fs");
 const hammerDB = JSON.parse(fs.readFileSync("hmr.json", "utf8"));
 const hammerBots = hammerDB.bots;
 
-exports.run = (bot, msg, args) => {
-  var i = Math.floor( Math.random() * hammerBots.length );
-  let embed= new Discord.RichEmbed()
-      .setColor(0x1a70b6)
-      .setAuthor(`Hammer Master Race 🔨`, `${bot.user.avatarURL}`, null)
-      .setImage(`http://gwynfell.ddns.net/HMR/${hammerBots[i].url}.png`)
-      .addField(`${hammerBots[i].name}`, `${hammerBots[i].alias}`)
+exports.run = (bot, msg, args) => {  // eslint-disable-line
+  const i = Math.floor(Math.random() * hammerBots.length);
+  const embed = new Discord.RichEmbed()
+    .setColor(0x1a70b6)
+    .setAuthor(`Hammer Master Race 🔨`, `${bot.user.avatarURL}`, null)
+    .setImage(`http://gwynfell.ddns.net/HMR/${hammerBots[i].url}.png`)
+    .addField(`${hammerBots[i].name}`, `${hammerBots[i].alias}`);
   msg.channel.send(embed);
 };
 

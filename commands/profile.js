@@ -4,7 +4,8 @@ exports.run = (bot, msg, args) => {
       .then(m => {
         m.edit(`Pong! Latency: \`${m.createdTimestamp - msg.createdTimestamp}ms\``);
       });
-  } else {
+  }
+  else {
     msg.channel.send(`You fool!\nThis is a simple ping/pong command it does not need any arguments!\n\`${args.join(" ")}\` What were you even thinking!`);
   }
 };

@@ -1,6 +1,6 @@
 exports.run = (bot, msg, args) => {
   if (args.length != 2) return msg.channel.send("⚠️  |  You need to name two combatants!");
-  let combatantOne = args[Math.floor(Math.random() * 2)];
+  const combatantOne = args[Math.floor(Math.random() * 2)];
   msg.channel.send({
     embed: {
       color: 0x1a71b8,
@@ -12,10 +12,10 @@ exports.run = (bot, msg, args) => {
     embed: {
       color: 0xe93b32,
       title: "Red Corner",
-      description: `**${args.filter(c => c!=combatantOne)}**`
+      description: `**${args.filter(c => c != combatantOne)}**`
     }
   });
-}
+};
 exports.conf = {
   permLevel: 0,
   aliases: ["corner", "c", "sides", "side"],
