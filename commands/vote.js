@@ -18,12 +18,9 @@ module.exports.run = async (client, message, args) => {
 };
 
 exports.conf = {
-  permLevel: 0,
-  aliases: ["poll", "v"]
-};
-
-exports.help = {
   name: "vote",
+  permLevel: 0,
+  aliases: ["poll", "v"],
   description: "create a vote ",
   usage: "vote :: create a reaction based vote"
 };

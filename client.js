@@ -1,14 +1,12 @@
-const Discord = require("discord.js");
-const bot = new Discord.Client();
+client.const Discord = require("discord.js");
+const client = new Discord.Client();
 const fs = require ("fs");
 const config = require("./config.json");
-const reactionInterface = require("./functions/reactionInterface.js");
 
-// extending the bot client for easy access in the commands.
-bot.config = config;
-bot.commands = new Discord.Collection();
-bot.aliases = new Discord.Collection();
-bot.interface = reactionInterface;
+// extending the client for easy access in the commands.
+client.config = config;
+client.commands = new Discord.Collection();
+client.aliases = new Discord.Collection();
 
 // Load the contents of the `/commands/` folder and each file in it.
 fs.readdir("./commands/", (err, files) => {
@@ -20,20 +18,20 @@ fs.readdir("./commands/", (err, files) => {
     if(f.split(".").slice(-1)[0] !== "js") return;
     // require the file itself in memory
     const props = require(`./commands/${f}`);
-    console.log(`>Loading Command: ${props.help.name}. -success`);
+    console.log(`>Loading Command: ${props.conf.name}. -success`);
     // add the command to the Commands Collection
-    bot.commands.set(props.help.name, props);
+    client.commands.set(props.conf.name, props);
     // loops through each Alias in that commands
     props.conf.aliases.forEach(alias => {
       // add the alias to the Aliasses Collection
-      bot.aliases.set(alias, props.help.name);
+      client.aliases.set(alias, props.conf.name);
     });
   });
 });
 
 // mesage handler
-bot.on("message", async msg => {
-  // Ignore messages with no prefix, ignore bot messages.
+client.on("message", async msg => {
+  // Ignore messages with no prefix, ignore client messages.
   if (!msg.content.startsWith(config.prefix)) return;
   if (msg.author.bot) return;
 
@@ -41,17 +39,17 @@ bot.on("message", async msg => {
   const args = msg.content.slice(config.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
 
-  const perms = bot.elevation(msg);
+  const perms = client.elevation(msg);
   let cmd;
   // check if the command exists in commands
-  if (bot.commands.has(command)) {
+  if (client.commands.has(command)) {
     // Assign the command, if it exists in commands
-    cmd = bot.commands.get(command);
+    cmd = client.commands.get(command);
   // Check if the comman exists in Aliases
   }
-  else if (bot.aliases.has(command)) {
+  else if (client.aliases.has(command)) {
     // Assign the command, if it exists in Aliasses
-    cmd = bot.commands.get(bot.aliases.get(command));
+    cmd = client.commands.get(client.aliases.get(command));
   }
 
   if (cmd) {
@@ -63,31 +61,31 @@ bot.on("message", async msg => {
 });
 
 // Ready event, write message to the console.
-bot.once("ready", () => {
-  console.log(`Besiege Bot: Ready to serve ${bot.guilds.size} servers.`);
-  bot.user.setPresence({ game: { name: `Besiege`, type: 0 } });
+client.once("ready", () => {
+  console.log(`Besiege Bot: Ready to serve ${client.guilds.size} servers.`);
+  client.user.setPresence({ game: { name: `Besiege`, type: 0 } });
 });
 
 // Welcome message (guildMemberAdd event)
-bot.on("guildMemberAdd", member => {
+client.on("guildMemberAdd", member => {
   member.guild.channels.get(config.chanID.welcome).send(`Welcome, ${member}!\nMake sure to check ${member.guild.channels.get(config.chanID.arenaInfo)} for the times at which the server is usually up.\nIn ${member.guild.channels.get(config.chanID.gallery)} you can find some inspiration.`);
 });
 
 // write errors and warnings to the console.
-bot.on("error", console.error);
-bot.on("warn", console.warn);
+client.on("error", console.error);
+client.on("warn", console.warn);
 
 // Login to Discord.
-bot.login(config.token);
+client.login(config.token);
 
 // function to reload a commands cache.
-bot.reload = function(command) {
+client.reload = function(command) {
   return new Promise((resolve, reject) => {
     try {
       delete require.cache[require.resolve(`./commands/${command}.js`)];
       const cmd = require(`./commands/${command}`);
-      bot.commands.delete(command);
-      bot.commands.set(command, cmd);
+      client.commands.delete(command);
+      client.commands.set(command, cmd);
       resolve();
     }
     catch (e) {
@@ -97,11 +95,11 @@ bot.reload = function(command) {
 };
 
 // Calculates the permission level.
-bot.elevation = function(msg) {
+client.elevation = function(msg) {
   /* this function should resolve to an permission level which
      is then sent to the command handler for verification */
   let permlvl = 0;
-  if (msg.member.roles.has(config.roleID.contributor)) permlvl = 1;
+  if (msg.member.roles.has(config.roleID.miniMod)) permlvl = 1;
   if (msg.member.roles.has(config.roleID.moderator)) permlvl = 2;
   if (msg.member.roles.has(config.roleID.serverOwner)) permlvl = 3;
   if (msg.author.id === config.ownerID) permlvl = 4;

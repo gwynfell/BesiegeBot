@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 
-exports.run = async (bot, msg, args) => {
+exports.run = async (client, msg, args) => {
   msg.delete();
   let attachment;
   if (msg.attachments.size > 0) {
@@ -9,7 +9,7 @@ exports.run = async (bot, msg, args) => {
   if (!msg.mentions.users.first()) {
     if (!args[0]) return msg.channel.send("❌  |  you did not provide any arguments").then(m => setTimeout(()=> m.delete(), 3000));
     const [channelID, ...message] = args;
-    const channel = await bot.channels.get(channelID);
+    const channel = await client.channels.get(channelID);
     if (!attachment) return channel.send(message.join(" "));
     channel.send(message.join(" "), { files: [attachment] });
   }
@@ -22,12 +22,9 @@ exports.run = async (bot, msg, args) => {
 };
 
 exports.conf = {
-  permLevel: 3,
-  aliases: []
-};
-
-exports.help = {
   name: "say",
+  permLevel: 3,
+  aliases: [],
   description: "confidential",
   usage: "Don't bother, you don't have access."
 };

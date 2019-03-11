@@ -5,7 +5,7 @@ const blockDB = JSON.parse(fs.readFileSync("blockInfo.json", "utf8"));
 const blockInfo = blockDB.blocks;
 
 
-exports.run = (bot, msg, args) => {
+exports.run = async (client, msg, args) => {
   if (args[0] === "alphabetic" || args[0] === "a") {
     sortAndSend(blockInfo, "name");
   }
@@ -30,7 +30,7 @@ exports.run = (bot, msg, args) => {
           return sendEmbed(i);
         }
         if (i + 1 === blockInfo.length) {
-          msg.channel.send(`There is no block named ${blockName}.\nUse ${bot.config.prefix}bi to list all blocks and their respective IDs.`);
+          msg.channel.send(`There is no block named ${blockName}.\nUse ${client.config.prefix}bi to list all blocks and their respective IDs.`);
         }
       }
     }
@@ -46,7 +46,7 @@ exports.run = (bot, msg, args) => {
   function sendEmbed(i) {
     const embed = new Discord.RichEmbed()
       .setColor(0x1a70b6)
-      .setAuthor(`Blockinfo | ${blockInfo[i].name}`, `${bot.user.avatarURL}`, null)
+      .setAuthor(`Blockinfo | ${blockInfo[i].name}`, `${client.user.avatarURL}`, null)
       .setImage(`http://gwynfell.ddns.net/BesiegeBlocks/${i}.png`)
       .addField(`ID`, `${i}`, true)
       .addField(`Weight`, `${blockInfo[i].weight}`, true)
@@ -66,17 +66,14 @@ exports.run = (bot, msg, args) => {
       }
       string += `${array[i].ID} :: ${array[i].name}\n`;
     }
-    msg.channel.send(`= All blocks and their respective IDs sorted by ${key}=\n\n[Use ${bot.config.prefix}bi <ID / name> for details]\n\n${string}`, { code: "asciidoc" });
+    msg.channel.send(`= All blocks and their respective IDs sorted by ${key}=\n\n[Use ${client.config.prefix}bi <ID / name> for details]\n\n${string}`, { code: "asciidoc" });
   }
 };
 
 exports.conf = {
+  name: "blockinfo",
   permLevel: 0,
   aliases: ["bi", "blocks"],
-};
-
-exports.help = {
-  name: "blockinfo",
   description: "List of all blocks or information about a specific block",
   usage: "blockinfo :: list all blocks in Besiege sorted by their ID\nblockinfo alphabetic :: sort them alphabetically\nblockinfo <blockname / blockID> :: details on a specific block"
 };

@@ -1,4 +1,4 @@
-exports.run = (bot, msg, args) => {
+exports.run = async (client, msg, args) => {
   if (!args[0]) {
     msg.channel.send("Ping?")
       .then(m => {
@@ -11,12 +11,9 @@ exports.run = (bot, msg, args) => {
 };
 
 exports.conf = {
-  permLevel: 0,
-  aliases: []
-};
-
-exports.help = {
   name: "ping",
+  permLevel: 0,
+  aliases: [],
   description: "Ping/Pong command to test Latency",
   usage: "ping"
 };

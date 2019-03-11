@@ -1,21 +1,18 @@
-exports.run = (bot, msg, args) => {
+exports.run = async (client, msg, args) => {
   if (!args[0]) {
     msg.channel.send("❌  |  you did not provide a valid prefix");
   }
   else {
-    bot.config.prefix = args[0];
-    msg.channel.send(`✅  |  Prefix changed to: \`${bot.config.prefix}\``);
+    client.config.prefix = args[0];
+    msg.channel.send(`✅  |  Prefix changed to: \`${client.config.prefix}\``);
   }
 
 };
 
 exports.conf = {
-  permLevel: 3,
-  aliases: []
-};
-
-exports.help = {
   name: "prefix",
+  permLevel: 3,
+  aliases: [],
   description: "changes the prefix",
   usage: "prefix [prefix]"
 };

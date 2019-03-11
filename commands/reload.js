@@ -1,10 +1,10 @@
-exports.run = (bot, msg, args) => {
+exports.run = async (client, msg, args) => {
   let command;
-  if (bot.commands.has(args[0])) {
+  if (client.commands.has(args[0])) {
     command = args[0];
   }
-  else if (bot.aliases.has(args[0])) {
-    command = bot.aliases.get(args[0]);
+  else if (client.aliases.has(args[0])) {
+    command = client.aliases.get(args[0]);
   }
 
   if (!command) {
@@ -13,7 +13,7 @@ exports.run = (bot, msg, args) => {
   else {
     msg.channel.send(`🔄  |  Reloading: ${command}`)
       .then(m => {
-        bot.reload(command)
+        client.reload(command)
           .then(() => {
             m.edit(`✅  |  Successfully reloaded: ${command}`);
           })
@@ -25,12 +25,9 @@ exports.run = (bot, msg, args) => {
 };
 
 exports.conf = {
-  permLevel: 4,
-  aliases: ["rld"]
-};
-
-exports.help = {
   name: "reload",
+  permLevel: 3,
+  aliases: ["rld"],
   description: "Reloads the command file, if it has been updated or modified.",
   usage: "reload <commandname>"
 };

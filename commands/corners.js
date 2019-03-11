@@ -1,4 +1,4 @@
-exports.run = (bot, msg, args) => {
+exports.run = async (client, msg, args) => {
   if (args.length != 2) return msg.channel.send("⚠️  |  You need to name two combatants!");
   const combatantOne = args[Math.floor(Math.random() * 2)];
   msg.channel.send({
@@ -17,12 +17,9 @@ exports.run = (bot, msg, args) => {
   });
 };
 exports.conf = {
+  name: "corners",
   permLevel: 0,
   aliases: ["corner", "c", "sides", "side"],
-};
-
-exports.help = {
-  name: "corners",
   description: "Radomly assigns arena corners",
-  usage: "corner [Player 1] [Player 2]}"
+  usage: "corner [Player 1] [Player 2]}",
 };

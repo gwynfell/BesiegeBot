@@ -1,10 +1,10 @@
 const Question = require("../functions/question.js");
 
 // async run(message, args, settings) { // eslint-disable-line no-unused-vars
-exports.run = async (bot, message, args) => { // eslint-disable-line
+exports.run = async (client, msg, args) => { // eslint-disable-line
   const choice = await askQuestion();
 
-  if (choice) bot.send.success(`your choice was: \n\`${choice.index}: ${choice.string}\``, message.channel);
+  if (choice) client.send.success(`your choice was: \n\`${choice.index}: ${choice.string}\``, msg.channel);
 
   async function askQuestion(editMsg = undefined) {
     const options = [
@@ -19,12 +19,12 @@ exports.run = async (bot, message, args) => { // eslint-disable-line
       .addAnswer(options)
       .addAnswer("option 4")
       .setTime(30)
-      .setUser(message.author)
+      .setUser(msg.author)
       .setMessage(editMsg);
 
-    const answer = await question.askIn(message.channel).catch(err => {
-      question.message.delete();
-      bot.send.error(err.message, message.channel);
+    const answer = await question.askIn(msg.channel).catch(err => {
+      question.msg.delete();
+      client.send.error(err.message, msg.channel);
     });
 
     if (!answer) return;
@@ -32,19 +32,19 @@ exports.run = async (bot, message, args) => { // eslint-disable-line
     const confirm = new Question()
       .setTopic("confirm test")
       .setQuestion(`Are you sure you want to choose:\n\`${answer.index}: ${answer.string}\``)
-      .setUser(message.author)
+      .setUser(msg.author)
       .setMessage(question.message);
 
-    const confirmAnswer = await confirm.askIn(message.channel).catch(err => {
-      question.message.delete();
-      bot.send.error(err.message, message.channel);
+    const confirmAnswer = await confirm.askIn(msg.channel).catch(err => {
+      question.msg.delete();
+      client.send.error(err.message, msg.channel);
     });
 
     if (!confirmAnswer) return;
 
     switch (confirmAnswer.string) {
     case "YES": {
-      confirm.message.delete();
+      confirm.msg.delete();
       return answer;
     }
     case "NO": return askQuestion(confirm.message);
@@ -53,12 +53,9 @@ exports.run = async (bot, message, args) => { // eslint-disable-line
 };
 
 exports.conf = {
-  permLevel: 0,
-  aliases: []
-};
-
-exports.help = {
   name: "testQuestion",
+  permLevel: 0,
+  aliases: [],
   description: "All hail the hammer master race",
   usage: "hmr :: shows a random bot from the hammer master race"
 };

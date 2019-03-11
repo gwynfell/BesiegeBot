@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 
-exports.run = async (bot, msg, args) => {
+exports.run = async (client, msg, args) => {
 
   if (!args[0]) {
     msg.channel.send("❌  |  You need to provide a message ID or a mention").then(m => setTimeout(()=> m.delete(), 3000));
@@ -39,13 +39,10 @@ exports.run = async (bot, msg, args) => {
 };
 
 exports.conf = {
+  name: "quote",
   permLevel: 0,
   guildOnly: true,
-  aliases: ["q"]
-};
-
-exports.help = {
-  name: "quote",
+  aliases: ["q"],
   description: "Quote a message",
   usage: "quote <message ID or mention>"
 };
