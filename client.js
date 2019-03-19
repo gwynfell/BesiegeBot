@@ -1,4 +1,4 @@
-client.const Discord = require("discord.js");
+const Discord = require("discord.js");
 const client = new Discord.Client();
 const fs = require ("fs");
 const config = require("./config.json");
@@ -33,6 +33,8 @@ fs.readdir("./commands/", (err, files) => {
 client.on("message", async msg => {
   // Ignore messages with no prefix, ignore client messages.
   if (!msg.content.startsWith(config.prefix)) return;
+  // Regex code to check if the message starts with a-z, A-Z, or 0-9. Increase activity value accordingly.
+  // if (/^[a-zA-Z0-9].*/.test(msg.content)) increaseActivityValue(msg.author.id);
   if (msg.author.bot) return;
 
   // add the arguments and command to their respective constants.
@@ -56,7 +58,7 @@ client.on("message", async msg => {
     // Check user's permision to use the command.
     if (perms < cmd.conf.permLevel) return msg.channel.send("❌  |  You dont have permision to use that command!");
     // Run the "exports.run()" function defined in each command.
-    cmd.run(bot, msg, args);
+    cmd.run(client, msg, args);
   }
 });
 
