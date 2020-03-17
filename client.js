@@ -70,7 +70,7 @@ client.once("ready", () => {
 
 // Welcome message (guildMemberAdd event)
 client.on("guildMemberAdd", member => {
-  member.guild.channels.get(config.chanID.welcome).send(`Welcome, ${member}!\nMake sure to check ${member.guild.channels.get(config.chanID.arenaInfo)} for the times at which the server is usually up.\nIn ${member.guild.channels.get(config.chanID.gallery)} you can find some inspiration.`);
+  member.guild.channels.get(config.chanID.welcome).send(`Welcome, ${member}!\nPlease take a few moments to **carefully** read through our ${member.guild.channels.get(config.chanID.rules)}.\nAfter that, head to ${member.guild.channels.get(config.chanID.introduction)}. There you'll find all the information you need to know to get started.`);
 });
 
 // write errors and warnings to the console.

@@ -26,8 +26,8 @@ exports.run = async (client, msg, args) => {
 
 exports.conf = {
   name: "reload",
-  permLevel: 3,
+  permLevel: 4,
   aliases: ["rld"],
-  description: "Reloads the command file, if it has been updated or modified.",
-  usage: "reload <commandname>"
+  description: "reloads the command file, if it has been updated or modified.",
+  usage: "reload [commandname]"
 };

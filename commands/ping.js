@@ -13,7 +13,7 @@ exports.run = async (client, msg, args) => {
 exports.conf = {
   name: "ping",
   permLevel: 0,
-  aliases: [],
-  description: "Ping/Pong command to test Latency",
+  aliases: ["latency"],
+  description: "ping-pong command to test latency",
   usage: "ping"
 };

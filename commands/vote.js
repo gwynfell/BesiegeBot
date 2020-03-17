@@ -21,6 +21,6 @@ exports.conf = {
   name: "vote",
   permLevel: 0,
   aliases: ["poll", "v"],
-  description: "create a vote ",
-  usage: "vote :: create a reaction based vote"
+  description: "create a reaction based poll",
+  usage: "vote\nvote <amount of options(must be between 2 and 10)>"
 };

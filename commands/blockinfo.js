@@ -74,6 +74,6 @@ exports.conf = {
   name: "blockinfo",
   permLevel: 0,
   aliases: ["bi", "blocks"],
-  description: "List of all blocks or information about a specific block",
-  usage: "blockinfo :: list all blocks in Besiege sorted by their ID\nblockinfo alphabetic :: sort them alphabetically\nblockinfo <blockname / blockID> :: details on a specific block"
+  description: "list of all blocks or information about a specific block",
+  usage: "blockinfo\nblockinfo alphabetic\nblockinfo <blockname / blockID>"
 };

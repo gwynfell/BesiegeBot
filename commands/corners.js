@@ -20,6 +20,6 @@ exports.conf = {
   name: "corners",
   permLevel: 0,
   aliases: ["corner", "c", "sides", "side"],
-  description: "Radomly assigns arena corners",
-  usage: "corner [Player 1] [Player 2]}",
+  description: "radomly assigns arena corners",
+  usage: "corner [Player 1] [Player 2]",
 };

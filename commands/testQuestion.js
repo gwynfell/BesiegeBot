@@ -54,8 +54,8 @@ exports.run = async (client, msg, args) => { // eslint-disable-line
 
 exports.conf = {
   name: "testQuestion",
-  permLevel: 0,
+  permLevel: 4,
   aliases: [],
-  description: "All hail the hammer master race",
-  usage: "hmr :: shows a random bot from the hammer master race"
+  description: "confidential",
+  usage: "don't bother, you don't have access."
 };

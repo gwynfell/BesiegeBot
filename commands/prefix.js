@@ -11,7 +11,7 @@ exports.run = async (client, msg, args) => {
 
 exports.conf = {
   name: "prefix",
-  permLevel: 3,
+  permLevel: 2,
   aliases: [],
   description: "changes the prefix",
   usage: "prefix [prefix]"

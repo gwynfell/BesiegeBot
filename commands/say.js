@@ -23,8 +23,8 @@ exports.run = async (client, msg, args) => {
 
 exports.conf = {
   name: "say",
-  permLevel: 3,
+  permLevel: 4,
   aliases: [],
   description: "confidential",
-  usage: "Don't bother, you don't have access."
+  usage: "don't bother, you don't have access."
 };

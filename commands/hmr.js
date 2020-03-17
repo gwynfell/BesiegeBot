@@ -18,6 +18,6 @@ exports.conf = {
   name: "hmr",
   permLevel: 0,
   aliases: ["HammerMasterRace", "Hammer", "Hammers"],
-  description: "All hail the hammer master race",
-  usage: "hmr :: shows a random bot from the hammer master race"
+  description: "all hail the hammer master race",
+  usage: "hmr"
 };
